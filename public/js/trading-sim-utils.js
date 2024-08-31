@@ -1,10 +1,10 @@
-import mongoose from 'mongoose';
-import axios from 'axios';
-import {AUTH_DOMAIN, CLIENT_ID, CLIENT_SECRET, AUDIENCE} from "./env";
+// import mongoose from 'mongoose';
+// import axios from 'axios';
+// import {AUTH_DOMAIN, CLIENT_ID, CLIENT_SECRET, AUDIENCE} from "./env";
 
-const userSchema = new mongoose.Schema({
+// const userSchema = new mongoose.Schema({
 
-})
+// })
 
 document.addEventListener('DOMContentLoaded', () => {
     const symbolInput = document.getElementById('symbolInput');
@@ -158,29 +158,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    async function getManagementAPiToken(){
-        const options = {
-            method: 'POST',
-            url: `https://${AUTH_DOMAIN}/oauth/token`,
-            headers: { 'content-type': 'application/json' },
-            data: {
-                client_id: CLIENT_ID,
-                client_secret: CLIENT_SECRET,
-                audience: AUDIENCE,
-                grant_type: 'client_credentials'
-            }
-        };
+    // async function getManagementAPiToken(){
+    //     const options = {
+    //         method: 'POST',
+    //         url: `https://${AUTH_DOMAIN}/oauth/token`,
+    //         headers: { 'content-type': 'application/json' },
+    //         data: {
+    //             client_id: CLIENT_ID,
+    //             client_secret: CLIENT_SECRET,
+    //             audience: AUDIENCE,
+    //             grant_type: 'client_credentials'
+    //         }
+    //     };
     
-        try {
-            const response = await axios.request(options);
-            return response.data.access_token;
-        } catch (error) {
-            console.error("Error obtaining Management API token: ", error);
-            throw error;
-        }
-    }
+    //     try {
+    //         const response = await axios.request(options);
+    //         return response.data.access_token;
+    //     } catch (error) {
+    //         console.error("Error obtaining Management API token: ", error);
+    //         throw error;
+    //     }
+    // }
 
-    async function fetch_data(){
+    // async function fetch_data(){
         
-    }
+    // }
 });
