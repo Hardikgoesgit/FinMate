@@ -1,0 +1,13 @@
+package.json
+node_modules
+package-lock.json
+.env
+
+#tailwind
+.log/
+node_modules/
+docs/
+css/
+export.scss
+export/
+
